@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TensorFlow_UIClassifier", "TensorFlow_UIClassifier\TensorFlow_UIClassifier.pyproj", "{47FDD226-B8D7-4E72-B372-44FA45DABA38}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "build_image_data", "build_image_data\build_image_data.pyproj", "{56D812C8-BE62-489E-8D36-90DDE1F8736B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{47FDD226-B8D7-4E72-B372-44FA45DABA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{47FDD226-B8D7-4E72-B372-44FA45DABA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D812C8-BE62-489E-8D36-90DDE1F8736B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D812C8-BE62-489E-8D36-90DDE1F8736B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
