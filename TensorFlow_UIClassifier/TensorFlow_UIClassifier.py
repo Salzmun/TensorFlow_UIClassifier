@@ -25,10 +25,18 @@ inputy = 28
 
 ######### Setting Datasource #########
 
-from keras.datasets import fashion_mnist
+#from keras.datasets import fashion_mnist
 
-(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
+#(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
 
+filename = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/train-000.tfrecords"
+filenames = [filename]
+raw_dataset = tf.data.TFRecordDataset(filenames)
+
+for raw_record in raw_dataset.take(10):
+    print(repr(raw_dataset))
+
+(x_train, y_train), (x_test, y_test) = raw_dataset
 
 ########## Model Building #########
 def tensorflowmagic():

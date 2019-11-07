@@ -208,9 +208,11 @@
     <Content Include="Images\youtube_dark_en.PNG" />
     <Content Include="Images\youtube_light.PNG" />
     <Content Include="Images\youtube_light_en.PNG" />
+    <Content Include="TFRecords\train-000.tfrecords" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="TFRecords\" />
     <Folder Include="ValidationData_rough\" />
     <Folder Include="ValidationData_fine\" />
   </ItemGroup>
