@@ -7,6 +7,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TensorFlow_UIClassifier", "
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "build_image_data", "build_image_data\build_image_data.pyproj", "{56D812C8-BE62-489E-8D36-90DDE1F8736B}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TFRecord_Builder", "TFRecord_Builder\TFRecord_Builder.pyproj", "{7B751B00-3F4E-4D5A-9E9C-5E79B5EDF167}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,8 @@ Global
 		{47FDD226-B8D7-4E72-B372-44FA45DABA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56D812C8-BE62-489E-8D36-90DDE1F8736B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56D812C8-BE62-489E-8D36-90DDE1F8736B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B751B00-3F4E-4D5A-9E9C-5E79B5EDF167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B751B00-3F4E-4D5A-9E9C-5E79B5EDF167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
