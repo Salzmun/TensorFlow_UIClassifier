@@ -23,6 +23,55 @@
   <ItemGroup>
     <Compile Include="TFRecord_Builder.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Output\" />
+    <Folder Include="TrainingData_rough\" />
+    <Folder Include="TrainingData_rough\box\" />
+    <Folder Include="TrainingData_rough\icon\" />
+    <Folder Include="TrainingData_rough\text\" />
+    <Folder Include="ValidationData_rough\" />
+    <Folder Include="ValidationData_rough\box\" />
+    <Folder Include="ValidationData_rough\icon\" />
+    <Folder Include="ValidationData_rough\text\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Output\train-000.tfrecords" />
+    <Content Include="TrainingData_rough\box\123reifen_de_box.jpg" />
+    <Content Include="TrainingData_rough\box\3m_de_box.jpg" />
+    <Content Include="TrainingData_rough\box\3m_en_box.jpg" />
+    <Content Include="TrainingData_rough\box\addidas_de.jpg" />
+    <Content Include="TrainingData_rough\box\addidas_en.jpg" />
+    <Content Include="TrainingData_rough\box\amazon.jpg" />
+    <Content Include="TrainingData_rough\box\asmc_en.jpg" />
+    <Content Include="TrainingData_rough\icon\123reifen_de_icon.jpg" />
+    <Content Include="TrainingData_rough\icon\3m_de_text..jpg" />
+    <Content Include="TrainingData_rough\icon\acer_de.jpg" />
+    <Content Include="TrainingData_rough\icon\addidas_de.jpg" />
+    <Content Include="TrainingData_rough\icon\amazon.jpg" />
+    <Content Include="TrainingData_rough\icon\apple_de_exp.jpg" />
+    <Content Include="TrainingData_rough\icon\asmc_de.jpg" />
+    <Content Include="TrainingData_rough\text\123reifen_de_text.jpg" />
+    <Content Include="TrainingData_rough\text\3m_de_text..jpg" />
+    <Content Include="TrainingData_rough\text\3m_en_text..jpg" />
+    <Content Include="TrainingData_rough\text\acer_de_ext.jpg" />
+    <Content Include="TrainingData_rough\text\acer_en_ext.jpg" />
+    <Content Include="TrainingData_rough\text\addidas_de.jpg" />
+    <Content Include="TrainingData_rough\text\addidas_en.jpg" />
+    <Content Include="TrainingData_rough\text\apple_de_exp.jpg" />
+    <Content Include="TrainingData_rough\text\apple_en_exp.jpg" />
+    <Content Include="TrainingData_rough\text\asmc_en.jpg" />
+    <Content Include="ValidationData_rough\icon\atos_de_icon.jpg" />
+    <Content Include="ValidationData_rough\icon\begadi_en_icon.jpg" />
+    <Content Include="ValidationData_rough\icon\Lenovo_de_icon.jpg" />
+    <Content Include="ValidationData_rough\icon\pr0_de_icon.jpg" />
+    <Content Include="ValidationData_rough\icon\wakanim_de_icon.jpg" />
+    <Content Include="ValidationData_rough\text\asmc_de.jpg" />
+    <Content Include="ValidationData_rough\text\begadi_de_text.jpg" />
+    <Content Include="ValidationData_rough\text\begadi_en_text.jpg" />
+    <Content Include="ValidationData_rough\text\Lenovo_de_text.jpg" />
+    <Content Include="ValidationData_rough\text\pr0_de_text.jpg" />
+    <Content Include="ValidationData_rough\text\wakanim_de_text.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
