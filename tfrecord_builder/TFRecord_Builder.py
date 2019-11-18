@@ -4,6 +4,7 @@ import sys
 import tensorflow as tf
 import cv2
 from random import shuffle
+import numpy as np
 
 
 shuffle_data = True  # shuffle the addresses before saving
@@ -63,11 +64,10 @@ def GetLabels(addrs):
     return labels
 
 def load_image(addr):
-    # read an image and resize to (224, 224)
+    # read an image and resize to (50, 50)
     # cv2 load images as BGR, convert it to RGB
     img = cv2.imread(addr)
     #img = cv2.resize(img, (224, 224), interpolation=cv2.INTER_CUBIC)
-    #OpenCV(4.1.1) C:\projects\opencv-python\opencv\modules\imgproc\src\resize.cpp:3720: error: (-215:Assertion failed) !ssize.empty() in function 'cv::resize'
     img = cv2.resize(img, (50, 50),interpolation=cv2.INTER_CUBIC)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img = img.astype(np.float32)
@@ -90,7 +90,7 @@ for i in range(len(train_addrs)):
         print ('Train data: {}/{}'.format(i, len(train_addrs)))
         sys.stdout.flush()
     # Load the image
-    img = load_image(train_addrs[i])
+    img = load_image(os.path.join(train_path, train_addrs[i]))
     label = train_labels[i]
     # Create a feature
     feature = {'train/label': _int64_feature(label),
@@ -115,7 +115,7 @@ for i in range(len(val_addrs)):
         print ('Val data: {}/{}'.format(i, len(val_addrs)))
         sys.stdout.flush()
     # Load the image
-    img = load_image(val_addrs[i])
+    img = load_image(os.path.join(train_path, val_addrs[i]))
     label = val_labels[i]
     # Create a feature
     feature = {'val/label': _int64_feature(label),
@@ -136,7 +136,7 @@ for i in range(len(test_addrs)):
         print ('Test data: {}/{}'.format(i, len(test_addrs)))
         sys.stdout.flush()
     # Load the image
-    img = load_image(test_addrs[i])
+    img = load_image(os.path.join(train_path, test_addrs[i]))
     label = test_labels[i]
     # Create a feature
     feature = {'test/label': _int64_feature(label),
@@ -147,3 +147,11 @@ for i in range(len(test_addrs)):
     writer.write(example.SerializeToString())
 writer.close()
 sys.stdout.flush()
+
+
+#def main():
+    
+
+
+#if __name__ == "__main__":
+#    main()
