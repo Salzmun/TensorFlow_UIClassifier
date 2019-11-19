@@ -29,14 +29,31 @@ inputy = 28
 
 #(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
 
-filename = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/train-000.tfrecords"
-filenames = [filename]
-raw_dataset = tf.data.TFRecordDataset(filenames)
+train_filename = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/train.tfrecords"
+train_filenames = [train_filename]
 
-for raw_record in raw_dataset.take(10):
-    print(repr(raw_dataset))
+val_filename = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/.tfrecords"
+val_filenames = [val_filename]
 
-(x_train, y_train), (x_test, y_test) = raw_dataset
+train_dataset = tf.data.TFRecordDataset(train_filenames)
+
+val_dataset = tf.data.TFRecordDataset(val_filenames)
+
+#for raw_record in raw_dataset.take(10):
+#    print(repr(raw_dataset))
+
+#(x_train, y_train), (x_test, y_test) = raw_dataset
+
+
+def getlabels(j):
+    if j == 0:
+        return 'box'
+    elif j == 1:
+        return 'text'
+    elif j == 2:
+        return 'icon'
+    else:
+        return 'derp'
 
 ########## Model Building #########
 def tensorflowmagic():
@@ -50,8 +67,14 @@ def tensorflowmagic():
     model.compile(optimizer='sgd',
                 loss='sparse_categorical_crossentropy',
                 metrics=['accuracy'])
-    model.fit(x_train, y_train, epochs=epoch)
-    model.evaluate(x_test,  y_test, verbose=2)
+    # Error when checking input: expected flatten_input to have 3 dimensions, but got array with shape ()
+    # IMGs in record already flat?? 
+    # 1.) Change Inputlayer to utilize flattened / serialized images
+    # 2.) Read strings from record an rebuild them as images...
+    model.fit(train_dataset, epochs=epoch)
+    model.evaluate(val_dataset, verbose=2)  
+    #model.fit(x_train, y_train, epochs=epoch)
+    #model.evaluate(x_test,  y_test, verbose=2)
     
 ######### setup #########
 def main():

@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="TFRecord_Reader.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TensorFlow_UIClassifier.py" />
   </ItemGroup>
   <ItemGroup>
@@ -208,7 +211,6 @@
     <Content Include="Images\youtube_dark_en.PNG" />
     <Content Include="Images\youtube_light.PNG" />
     <Content Include="Images\youtube_light_en.PNG" />
-    <Content Include="TFRecords\train-000.tfrecords" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
