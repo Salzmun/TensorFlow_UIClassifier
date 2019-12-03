@@ -1,13 +1,15 @@
 
 import tensorflow as tf
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
 ######### tutorial code #########
-data_path = 'train.tfrecords'  # address to save the hdf5 file
+recordPath = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TFRecord_Builder/Output/"
+data_path = os.path.join(recordPath, 'train.tfrecords')  # address to save the hdf5 file
 
 
-with tf.Session() as sess:
+with tf.compat.v1.Session() as sess:
     feature = {'train/image': tf.FixedLenFeature([], tf.string),
                'train/label': tf.FixedLenFeature([], tf.int64)}
 

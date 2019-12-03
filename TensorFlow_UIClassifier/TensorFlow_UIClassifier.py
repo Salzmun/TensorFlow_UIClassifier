@@ -25,19 +25,23 @@ inputy = 28
 
 ######### Setting Datasource #########
 
-#from keras.datasets import fashion_mnist
+from keras.datasets import fashion_mnist
 
-#(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
+(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
 
-train_filename = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/train.tfrecords"
-train_filenames = [train_filename]
+#file_path = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/"
+#train_filename = "train.tfrecords"
+#train_filenames = [train_filename]
+#test_filename = "test.tfrecords"
+#test_filenames = [test_filename]
+#val_filename = "val.tfrecords"
+#val_filenames = [val_filename]
 
-val_filename = "C:/Users/Max/source/repos/TensorFlow_UIClassifier/TensorFlow_UIClassifier/TFRecords/.tfrecords"
-val_filenames = [val_filename]
+#train_dataset = tf.data.TFRecordDataset(train_filenames)
 
-train_dataset = tf.data.TFRecordDataset(train_filenames)
+#test_dataset = tf.data.TFRecordDataset(test_filenames)
 
-val_dataset = tf.data.TFRecordDataset(val_filenames)
+#val_dataset = tf.data.TFRecordDataset(val_filenames)
 
 #for raw_record in raw_dataset.take(10):
 #    print(repr(raw_dataset))
@@ -76,6 +80,7 @@ def tensorflowmagic():
     #model.fit(x_train, y_train, epochs=epoch)
     #model.evaluate(x_test,  y_test, verbose=2)
     
+
 ######### setup #########
 def main():
     tensorflowmagic()

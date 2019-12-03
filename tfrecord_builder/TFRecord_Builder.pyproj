@@ -35,7 +35,9 @@
     <Folder Include="ValidationData_rough\text\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Output\train-000.tfrecords" />
+    <Content Include="Output\test.tfrecords" />
+    <Content Include="Output\train.tfrecords" />
+    <Content Include="Output\val.tfrecords" />
     <Content Include="TrainingData_rough\box\123reifen_de_box.jpg" />
     <Content Include="TrainingData_rough\box\3m_de_box.jpg" />
     <Content Include="TrainingData_rough\box\3m_en_box.jpg" />

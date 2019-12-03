@@ -27,6 +27,7 @@
     <Compile Include="TensorFlow_UIClassifier.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dokumentation\Expose_Arbeitsgliederung_Bachlorarbeit_KNN_Patternrecognition.docx" />
     <Content Include="Images\123reifen_de.PNG" />
     <Content Include="Images\3m_de.PNG" />
     <Content Include="Images\3m_en.PNG" />
@@ -214,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Dokumentation\" />
     <Folder Include="TFRecords\" />
     <Folder Include="ValidationData_rough\" />
     <Folder Include="ValidationData_fine\" />
